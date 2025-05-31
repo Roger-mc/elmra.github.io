@@ -1,68 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Elmra | Still. True. Becoming.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico" />
   <style>
-    body {
+    :root {
+      --bg: #f9f9f9;
+      --text: #333;
+      --muted: #777;
+      --accent: #444;
+      --max-width: 720px;
+    }
+
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background-color: #fafafa;
-      color: #333;
+      background-color: var(--bg);
+      color: var(--text);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
       text-align: center;
+      min-height: 100vh;
+      padding: 2rem;
+      animation: fadeIn 1s ease-out;
     }
 
     h1 {
+      font-size: 3rem;
       font-weight: 300;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
       letter-spacing: 1px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      font-weight: 300;
-      max-width: 600px;
-      margin: 0.25rem auto 1rem auto;
-      line-height: 1.5;
+      margin-bottom: 0.5rem;
     }
 
     .tagline {
-      font-size: 1rem;
-      color: #777;
-      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
     }
 
-    .contact {
-      font-size: 0.95rem;
-      color: #555;
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: var(--max-width);
+      margin-bottom: 1rem;
+      color: var(--text);
     }
 
     a {
-      color: #333;
+      font-size: 1rem;
+      color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s ease;
     }
 
     a:hover {
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--accent);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .tagline,
+      p,
+      a {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Elmra</h1>
   <p class="tagline">Still. True. Becoming.</p>
-  <p>A quiet space for personal truth, honest growth, and social clarity.<br>
-     We’re building something with intention.</p>
-  <p class="contact">
-    📬 <a href="mailto:hello@elmra.com">hello@elmra.com</a>
+  <p>
+    A quiet space for personal truth, honest growth, and social clarity.<br />
+    We’re building something with intention.
   </p>
+  <p><a href="mailto:hello@elmra.com">hello@elmra.com</a></p>
 </body>
 </html>

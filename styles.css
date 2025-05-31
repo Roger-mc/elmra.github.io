@@ -1,0 +1,86 @@
+/* Base Styles */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: linear-gradient(145deg, #fdfcfb, #e2d1c3);
+  background-blend-mode: overlay;
+  background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #5c4326;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  font-size: 1rem;
+  color: #333;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+section h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.25rem;
+  color: #3d2c1c;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #2c4c6d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.contact {
+  text-align: center;
+  font-style: italic;
+  margin-top: 1rem;
+}

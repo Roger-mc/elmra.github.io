@@ -1,68 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elmra | Reading Path</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elmra | Still. True. Rising.</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Elmra Reading Path</h1>
-  <h2>Still. True. Rising.</h2>
+  <header>
+    <h1>Elmra</h1>
+    <h2>Still. True. Rising.</h2>
+    <p class="intro">A movement for personal truth, honest growth, ethical courage, and resilient community.</p>
+  </header>
 
-  <div class="level">
-    <h3>Level 1 – Authentic Awareness</h3>
-    <p>Awakening, humility, and personal accountability.</p>
-    <div class="books">
+  <main>
+    <section class="vision">
+      <h3>Our Vision</h3>
+      <p>Elmra empowers individuals to face life with humility, moral clarity, and enduring strength. Through spiritual insight, psychological realism, and daily practice, we rise together—resilient, true, and unafraid.</p>
+    </section>
+
+    <section class="ascension-links">
+      <h3>Explore the Path</h3>
       <ul>
-        <li><input type="checkbox" id="book1"><label for="book1"><strong>The Way of the Peaceful Warrior</strong> by Dan Millman</label></li>
-        <li><input type="checkbox" id="book2"><label for="book2"><strong>The Untethered Soul</strong> by Michael A. Singer</label></li>
+        <li><a href="authentic-awareness.html">Level 1 – Authentic Awareness</a></li>
+        <li><a href="inner-resilience.html">Level 2 – Inner Resilience</a></li>
+        <li><a href="courageous-connection.html">Level 3 – Courageous Connection</a></li>
+        <li><a href="meaningful-action.html">Level 4 – Meaningful Action</a></li>
       </ul>
-    </div>
-  </div>
+    </section>
 
-  <div class="level">
-    <h3>Level 2 – Inner Resilience</h3>
-    <p>Discipline, courage, and perseverance through adversity.</p>
-    <div class="books">
+    <section class="books">
+      <h3>Recommended Reading</h3>
+      <p>We recommend books that align with each phase of the Elmra path. These are affiliate links and we receive a small commission at no cost to you — used entirely to support the movement.</p>
       <ul>
-        <li><input type="checkbox" id="book3"><label for="book3"><strong>Meditations</strong> by Marcus Aurelius</label></li>
-        <li><input type="checkbox" id="book4"><label for="book4"><strong>The Obstacle Is the Way</strong> by Ryan Holiday</label></li>
+        <li><a href="#" target="_blank">The Way of the Peaceful Warrior by Dan Millman</a></li>
+        <li><a href="#" target="_blank">The Untethered Soul by Michael A. Singer</a></li>
+        <li><a href="#" target="_blank">Meditations by Marcus Aurelius</a></li>
+        <li><a href="#" target="_blank">The Obstacle Is the Way by Ryan Holiday</a></li>
+        <li><a href="#" target="_blank">Man’s Search for Meaning by Viktor Frankl</a></li>
+        <li><a href="#" target="_blank">Atomic Habits by James Clear</a></li>
       </ul>
-    </div>
-  </div>
+    </section>
 
-  <div class="level">
-    <h3>Level 3 – Courageous Connection</h3>
-    <p>Empathy, vulnerability, and deep trust with others.</p>
-    <div class="books">
-      <ul>
-        <li><input type="checkbox" id="book5"><label for="book5"><strong>Nonviolent Communication</strong> by Marshall Rosenberg</label></li>
-        <li><input type="checkbox" id="book6"><label for="book6"><strong>Braving the Wilderness</strong> by Brené Brown</label></li>
-      </ul>
-    </div>
-  </div>
+    <section class="contact">
+      <p>Contact us: <a href="mailto:hello@elmra.com">hello@elmra.com</a></p>
+    </section>
+  </main>
 
-  <div class="level">
-    <h3>Level 4 – Meaningful Action</h3>
-    <p>Purpose-driven contribution and ethical influence.</p>
-    <div class="books">
-      <ul>
-        <li><input type="checkbox" id="book7"><label for="book7"><strong>Man’s Search for Meaning</strong> by Viktor Frankl</label></li>
-        <li><input type="checkbox" id="book8"><label for="book8"><strong>Atomic Habits</strong> by James Clear</label></li>
-      </ul>
-    </div>
-  </div>
-
-  <script>
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach((checkbox) => {
-      const saved = localStorage.getItem(checkbox.id);
-      if (saved === 'true') checkbox.checked = true;
-      checkbox.addEventListener('change', () => {
-        localStorage.setItem(checkbox.id, checkbox.checked);
-      });
-    });
-  </script>
+  <footer>
+    <p>&copy; 2025 Elmra. All rights reserved.</p>
+  </footer>
 </body>
 </html>
+

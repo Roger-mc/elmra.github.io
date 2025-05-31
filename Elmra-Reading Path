@@ -4,46 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elmra | Reading Path</title>
-  <style>
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: linear-gradient(145deg, #fdfcfb, #e2d1c3);
-      background-blend-mode: overlay;
-      background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
-      background-attachment: fixed;
-      background-size: cover;
-      color: #333;
-    }
-    h1, h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .level {
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin: 1.5rem auto;
-      max-width: 700px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .level h3 {
-      margin-top: 0;
-      color: #5c4326;
-    }
-    .books ul {
-      padding-left: 1.2rem;
-    }
-    .books li {
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-    }
-    .books input[type="checkbox"] {
-      margin-right: 0.6rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <h1>Elmra Reading Path</h1>
@@ -94,7 +55,6 @@
   </div>
 
   <script>
-    // Save reading progress using localStorage
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach((checkbox) => {
       const saved = localStorage.getItem(checkbox.id);

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elmra | Reading Path</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: linear-gradient(145deg, #fdfcfb, #e2d1c3);
+      background-blend-mode: overlay;
+      background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
+      background-attachment: fixed;
+      background-size: cover;
+      color: #333;
+    }
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .level {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem auto;
+      max-width: 700px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .level h3 {
+      margin-top: 0;
+      color: #5c4326;
+    }
+    .books ul {
+      padding-left: 1.2rem;
+    }
+    .books li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .books input[type="checkbox"] {
+      margin-right: 0.6rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Elmra Reading Path</h1>
+  <h2>Still. True. Rising.</h2>
+
+  <div class="level">
+    <h3>Level 1 – Authentic Awareness</h3>
+    <p>Awakening, humility, and personal accountability.</p>
+    <div class="books">
+      <ul>
+        <li><input type="checkbox" id="book1"><label for="book1"><strong>The Way of the Peaceful Warrior</strong> by Dan Millman</label></li>
+        <li><input type="checkbox" id="book2"><label for="book2"><strong>The Untethered Soul</strong> by Michael A. Singer</label></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="level">
+    <h3>Level 2 – Inner Resilience</h3>
+    <p>Discipline, courage, and perseverance through adversity.</p>
+    <div class="books">
+      <ul>
+        <li><input type="checkbox" id="book3"><label for="book3"><strong>Meditations</strong> by Marcus Aurelius</label></li>
+        <li><input type="checkbox" id="book4"><label for="book4"><strong>The Obstacle Is the Way</strong> by Ryan Holiday</label></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="level">
+    <h3>Level 3 – Courageous Connection</h3>
+    <p>Empathy, vulnerability, and deep trust with others.</p>
+    <div class="books">
+      <ul>
+        <li><input type="checkbox" id="book5"><label for="book5"><strong>Nonviolent Communication</strong> by Marshall Rosenberg</label></li>
+        <li><input type="checkbox" id="book6"><label for="book6"><strong>Braving the Wilderness</strong> by Brené Brown</label></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="level">
+    <h3>Level 4 – Meaningful Action</h3>
+    <p>Purpose-driven contribution and ethical influence.</p>
+    <div class="books">
+      <ul>
+        <li><input type="checkbox" id="book7"><label for="book7"><strong>Man’s Search for Meaning</strong> by Viktor Frankl</label></li>
+        <li><input type="checkbox" id="book8"><label for="book8"><strong>Atomic Habits</strong> by James Clear</label></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Save reading progress using localStorage
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox) => {
+      const saved = localStorage.getItem(checkbox.id);
+      if (saved === 'true') checkbox.checked = true;
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem(checkbox.id, checkbox.checked);
+      });
+    });
+  </script>
+</body>
+</html>

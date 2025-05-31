@@ -13,7 +13,7 @@ body {
 header {
   text-align: center;
   padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(0,0,0,0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -39,7 +39,7 @@ main {
   padding: 1rem;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 section {
@@ -72,7 +72,7 @@ a:hover {
 footer {
   text-align: center;
   padding-top: 1rem;
-  border-top: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 0.9rem;
   color: #666;
 }
@@ -83,23 +83,27 @@ footer {
   margin-top: 1rem;
 }
 
-.practices {
+/* Core Practices Section */
+.core-practices {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 0.75rem 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  padding: 0;
+  margin: 1rem 0 2rem;
+  list-style: none;
 }
 
-.practice-item {
-  display: flex;
-  align-items: center;
-  font-size: 0.95rem;
+.core-practices li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 1rem;
 }
 
-.practice-item::before {
-  content: '✔';
-  margin-right: 0.5rem;
-  color: #456c5c;
+.core-practices li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #D4AF37;
   font-weight: bold;
 }
+

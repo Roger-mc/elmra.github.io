@@ -3,45 +3,46 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 2rem;
-  background: linear-gradient(145deg, #fdfcfb, #e2d1c3);
+  background: linear-gradient(145deg, #fdfbf4, #e8dccc);
   background-blend-mode: overlay;
-  background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
+  background-image: url('https://www.transparenttextures.com/patterns/linen.png');
   background-attachment: fixed;
   background-size: cover;
-  color: #333;
+  color: #3d2c1c;
   line-height: 1.6;
 }
 
 header {
   text-align: center;
   padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(0,0,0,0.1);
+  border-bottom: 2px solid rgba(0,0,0,0.08);
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 0.2rem;
+  color: #2e1b0e;
 }
 
 h2 {
   font-size: 1.4rem;
-  color: #5c4326;
+  color: #4f3822;
   font-weight: normal;
   margin-bottom: 0.5rem;
 }
 
 .intro {
   font-size: 1rem;
-  color: #333;
+  color: #4f3e2a;
 }
 
 main {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 251, 245, 0.92);
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 section {
@@ -51,7 +52,7 @@ section {
 section h3 {
   margin-bottom: 0.6rem;
   font-size: 1.25rem;
-  color: #3d2c1c;
+  color: #5b3c23;
 }
 
 ul {
@@ -63,7 +64,7 @@ li {
 }
 
 a {
-  color: #2c4c6d;
+  color: #5b4326;
   text-decoration: none;
 }
 
@@ -74,13 +75,28 @@ a:hover {
 footer {
   text-align: center;
   padding-top: 1rem;
-  border-top: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0,0,0,0.08);
   font-size: 0.9rem;
-  color: #666;
+  color: #6c5842;
 }
 
 .contact {
   text-align: center;
   font-style: italic;
   margin-top: 1rem;
+}
+
+button, input[type="submit"] {
+  background-color: #5b4326;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #432f1a;
 }

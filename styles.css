@@ -29,6 +29,21 @@ h2 {
   margin: 0.3rem 0;
 }
 
+/* Slogan Navigation Links */
+.slogan-links a {
+  margin: 0 0.4rem;
+  color: #2a2a2a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.slogan-links a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
 .intro {
   font-size: 0.95rem;
   color: #555;

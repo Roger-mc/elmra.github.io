@@ -1,157 +1,173 @@
-/* Base Styles */
+/* Typography & Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 body {
   font-family: 'Libre Baskerville', Georgia, serif;
-  margin: 0;
-  padding: 2rem;
-  background: #fdf8f3;
+  background-color: #fdfaf5;
   color: #2b2b2b;
+  margin: 0;
+  padding: 0 1rem;
   line-height: 1.6;
 }
 
+/* Header */
 header {
   text-align: center;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  padding: 2rem 1rem 1rem;
+  border-bottom: 1px solid #e6e3dc;
 }
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.2rem;
+  margin: 0.5rem 0;
 }
 
 h2 {
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1.25rem;
+  font-weight: normal;
   color: #444;
-  margin-bottom: 0.5rem;
+  margin: 0.3rem 0;
 }
 
 .intro {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #555;
+  margin-top: 0.5rem;
 }
 
+/* Main Layout */
 main {
-  max-width: 800px;
+  max-width: 768px;
   margin: 2rem auto;
+  background-color: #fffdf8;
   padding: 2rem;
-  background: #fffaf5;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
 }
 
+/* Section Headings */
 section {
-  margin-bottom: 2.5rem;
-}
-
-section h3 {
-  margin-bottom: 0.6rem;
-  font-size: 1.25rem;
-  color: #1e1e1e;
-}
-
-ul {
-  padding-left: 1.5rem;
-  list-style-type: none;
-}
-
-li {
-  margin-bottom: 0.75rem;
-}
-
-a {
-  color: #2a3d45;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  text-align: center;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.contact {
-  text-align: center;
-  font-style: italic;
-  margin-top: 1rem;
-}
-
-/* Practices Grid */
-.practices {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem 1rem;
-  margin-top: 1.5rem;
   margin-bottom: 2rem;
 }
 
-.practice-item {
-  display: flex;
-  align-items: center;
-  font-size: 0.95rem;
+section h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: #111;
 }
 
-.practice-item::before {
-  content: '✔';
-  margin-right: 0.5rem;
-  color: #000; /* black icons for strong visual anchor */
-  font-weight: bold;
+/* Daily Habits */
+.habits ol {
+  padding-left: 1.2rem;
 }
 
-/* Daily Habits List Icons */
-.daily-habits li::before {
-  content: '✨';
-  margin-right: 0.5rem;
+.habits li {
+  margin-bottom: 0.75rem;
+  list-style-type: decimal;
+  font-size: 0.98rem;
+}
+
+/* Core Practices */
+.core-practices ul.practices-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.25rem;
+  font-size: 0.98rem;
+  padding-left: 0.2rem;
+}
+
+.core-practices ul li::before {
+  content: "✔ ";
   color: #000;
   font-weight: bold;
 }
 
-/* ConvertKit Embed: Button Styling */
-form button,
-form input[type="submit"] {
+/* Recommended Reading */
+.books ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.books ul li {
+  margin-bottom: 0.5rem;
+}
+
+.books ul li a {
+  text-decoration: none;
+  color: #2a3d45;
+}
+
+.books ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Subscribe */
+.subscribe h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.subscribe form {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.form-placeholder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-placeholder input[type="email"] {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-placeholder button {
   background-color: #000;
   color: #fff;
-  border: none;
-  padding: 0.75rem 1.25rem;
   font-size: 1rem;
-  font-family: 'Libre Baskerville', Georgia, serif;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
 }
 
-form button:hover,
-form input[type="submit"]:hover {
-  background-color: #333;
+.form-placeholder button:hover {
+  opacity: 0.9;
 }
 
-/* Gently Hide 'Built with Kit' Branding */
-form + div[style*="text-align:center"],
-.signup-form div[style*="text-align:center"] {
-  opacity: 0.03;
-  font-size: 0.7rem;
-  pointer-events: none;
+.disclaimer {
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 0.5rem;
 }
 
-/* Mobile Responsiveness */
+/* Footer */
+footer {
+  text-align: center;
+  margin: 2rem auto 1rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+footer em {
+  color: #444;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 600px) {
-  .practices {
+  .core-practices ul.practices-grid {
     grid-template-columns: 1fr;
   }
 
   main {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 }
-
-
-
-

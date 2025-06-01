@@ -16,6 +16,7 @@ header {
   text-align: center;
   padding: 2rem 1rem 1rem;
   border-bottom: 2px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
 }
 
 h1 {

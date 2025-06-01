@@ -76,17 +76,19 @@ section h3 {
 /* Daily Habits */
 .habits ol {
   counter-reset: habit-counter;
-  padding-left: 1.2rem;
+  padding-left: 0; /* Removes default browser indent */
+  margin-left: 0;
+  list-style: none;
 }
 
 .habits li {
   counter-increment: habit-counter;
   list-style: none;
+  position: relative;
+  padding-left: 1.4rem; /* or fine-tune visually */
   margin-bottom: 0.75rem;
   font-size: 0.98rem;
-  position: relative;
-  padding-left: 1.5rem;
-  line-height: 1.6; /* Ensure vertical spacing matches body */
+  line-height: 1.6;
 }
 
 .habits li::before {

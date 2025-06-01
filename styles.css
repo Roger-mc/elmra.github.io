@@ -122,17 +122,11 @@ ul {
   padding-left: 0.2rem;
   line-height: 1.6;
 }
-
-.core-practices ul li::before {
-  content: "✔ ";
+.core-practices ul.practices-grid span[aria-hidden="true"] {
   font-weight: bold;
   color: #000;
   margin-right: 0.25rem;
-  position: relative;
-  top: 0.05rem; /* Light vertical alignment tweak */
-  aria-hidden: true; /* Not valid in CSS */
 }
-
 /* Recommended Reading */
 .books ul {
   list-style-type: none;

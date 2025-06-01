@@ -98,7 +98,19 @@ section h3 {
   color: #2b2b2b;
   font-family: Arial, sans-serif;
 }
+/* General List Alignment Fix */
+ol, ul {
+  padding-left: 1.2em; /* Adjust if needed to line up with ticks */
+  margin-left: 0;
+}
 
+ol {
+  list-style-position: outside;
+}
+
+ul {
+  list-style-position: outside;
+}
 /* Core Practices */
 .core-practices ul.practices-grid {
   list-style: none;

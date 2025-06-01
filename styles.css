@@ -1,110 +1,276 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elmra | Still. True. Rising.</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-<header>
-  <h1>Elmra</h1>
-  <h2 class="slogan-links">
-    <a href="still.html">Still.</a>
-    <a href="true.html">True.</a>
-    <a href="rising.html">Rising.</a>
-  </h2>
-  <p class="intro">
-    A movement for personal truth, honest growth, ethical courage, and resilient community.
-  </p>
-</header>
+/* Typography & Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
-<main>
-  <div class="cta-banner">
-    <a href="#subscribe" class="cta-button">Join the Movement</a>
-  </div>
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  background-color: #f0eade;
+  color: #2b2b2b;
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
 
-  <section class="vision-grid">
-    <div class="vision-text">
-      <h3>Our Vision</h3>
-      <p>
-        Elmra empowers individuals to face life with humility, moral clarity, and enduring strength.
-        Through spiritual insight, psychological realism, and daily practice, we rise together—resilient, true, and unafraid.
-      </p>
-    </div>
-    <div class="vision-pillars">
-      <ol>
-        <li>Authentic Awareness</li>
-        <li>Inner Resilience</li>
-        <li>Courageous Connection</li>
-        <li>Meaningful Action</li>
-      </ol>
-    </div>
-  </section>
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  border-bottom: 1px solid #e6e3dc;
+}
 
-  <section class="habits">
-    <h3>Daily Habits to Begin Your Day</h3>
-    <ol>
-      <li>Begin the day with 2 minutes of stillness or breath awareness</li>
-      <li>Note 1 moment of personal truth or clarity in a journal</li>
-      <li>Practice one small act of connection, courage, or service</li>
-      <li>End the day by reviewing how you stayed aligned with your values</li>
-    </ol>
-  </section>
+h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
 
-  <section class="core-practices">
-    <h3>Core Practices</h3>
-    <ul class="practices-grid">
-      <li><span aria-hidden="true">✔</span> Mindful reflection</li>
-      <li><span aria-hidden="true">✔</span> Ethical dialogue</li>
-      <li><span aria-hidden="true">✔</span> Self-accountability</li>
-      <li><span aria-hidden="true">✔</span> Environmental responsibility</li>
-      <li><span aria-hidden="true">✔</span> Consistent learning</li>
-    </ul>
-  </section>
+h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: #444;
+  margin: 0.3rem 0;
+}
 
-  <section class="coming-soon">
-    <h3>Explore the Path to the Best Version of You (Coming Soon)</h3>
-    <p>
-      Elmra’s Path: a journey through awareness, resilience, connection, action,
-      and ethical influence will be introduced in the next phase. For now, begin with small,
-      consistent steps toward becoming.
-    </p>
-  </section>
+/* Slogan Navigation Links */
+.slogan-links a {
+  margin: 0 0.4rem;
+  color: #2a2a2a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
 
-  <section class="books">
-    <h3>Books That Inspire Our Path</h3>
-    <p>
-      We recommend books that align with Elmra’s philosophy. These are affiliate links and we receive a small commission at no cost to you used entirely to support the movement.
-    </p>
-    <ul>
-      <li><a href="#">The Way of the Peaceful Warrior by Dan Millman</a></li>
-      <li><a href="#">The Untethered Soul by Michael A. Singer</a></li>
-      <li><a href="#">Meditations by Marcus Aurelius</a></li>
-      <li><a href="#">The Obstacle Is the Way by Ryan Holiday</a></li>
-      <li><a href="#">Man’s Search for Meaning by Viktor Frankl</a></li>
-      <li><a href="#">Atomic Habits by James Clear</a></li>
-    </ul>
-  </section>
+.slogan-links a:hover {
+  color: #000;
+  text-decoration: underline;
+}
 
-  <section class="subscribe" id="subscribe">
-    <h3>Join the Founding Circle</h3>
-    <p>Be part of our early community.</p>
-    <form>
-      <div class="form-placeholder">
-        <input type="email" placeholder="Your email address" required />
-        <button type="submit">Get Involved</button>
-      </div>
-      <p class="disclaimer">We respect your privacy. Unsubscribe at any time.</p>
-    </form>
-  </section>
-</main>
+.intro {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
 
-<footer>
-  <p><em>Contact us: hello@elmra.com</em></p>
-</footer>
-</body>
-</html>
+/* Main Layout */
+main {
+  max-width: 768px;
+  margin: 2rem auto;
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Headings */
+section {
+  margin-bottom: 2rem;
+}
+
+section h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: #111;
+}
+
+/* Daily Habits */
+.habits ol {
+  counter-reset: habit-counter;
+  padding-left: 0; /* Removes default browser indent */
+  margin-left: 0;
+  list-style: none;
+}
+
+.habits li {
+  counter-increment: habit-counter;
+  list-style: none;
+  position: relative;
+  padding-left: 1.4rem; /* or fine-tune visually */
+  margin-bottom: 0.75rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.habits li::before {
+  content: counter(habit-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0.1rem; /* adjust as needed */
+  font-weight: 700;
+  color: #2b2b2b;
+  font-family: Arial, sans-serif;
+}
+/* General List Alignment Fix */
+ol, ul {
+  padding-left: 1.2em; /* Adjust if needed to line up with ticks */
+  margin-left: 0;
+}
+
+ol {
+  list-style-position: outside;
+}
+
+ul {
+  list-style-position: outside;
+}
+/* Core Practices */
+.core-practices ul.practices-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.25rem;
+  font-size: 0.98rem;
+  padding-left: 0.2rem;
+  line-height: 1.6;
+}
+.core-practices ul.practices-grid span[aria-hidden="true"] {
+  font-weight: bold;
+  color: #000;
+  margin-right: 0.25rem;
+}
+/* Recommended Reading */
+.books ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.books ul li {
+  margin-bottom: 0.5rem;
+}
+
+.books ul li a {
+  text-decoration: none;
+  color: #2a3d45;
+}
+
+.books ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Subscribe */
+.subscribe h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.subscribe form {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.form-placeholder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-placeholder input[type="email"] {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-placeholder button {
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-placeholder button:hover {
+  opacity: 0.9;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 2rem auto 1rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+footer em {
+  color: #444;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .core-practices ul.practices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
     padding: 1.5rem 1rem;
   }
+}
+/* ====================================
+   Elmra Concept Visual Enhancements
+   ==================================== */
+
+.cta-banner {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #222;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.vision-pillars ol {
+  list-style-position: outside;
+  padding-left: 1.25rem;
+  margin: 0;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+section + section {
+  border-top: 1px solid #e4dfd8;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+section h3 {
+  font-size: 1.35rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-weight: bold;
+}
+
+.subscribe button {
+  background-color: #222;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }

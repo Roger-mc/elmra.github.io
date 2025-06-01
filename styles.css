@@ -94,7 +94,7 @@ section h3 {
   content: counter(habit-counter) ".";
   position: absolute;
   left: 0;
-  font-weight: bold;
+  font-weight: 700;
   color: #2b2b2b;
 }
 

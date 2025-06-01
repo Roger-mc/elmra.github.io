@@ -5,7 +5,7 @@ body {
   font-family: 'Libre Baskerville', Georgia, serif;
   margin: 0;
   padding: 2rem;
-  background: #fdf9f3;
+  background: #fdf8f3;
   color: #2b2b2b;
   line-height: 1.6;
 }
@@ -13,7 +13,7 @@ body {
 header {
   text-align: center;
   padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
 
 h1 {
@@ -28,16 +28,6 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-h2 a {
-  color: #444;
-  margin: 0 0.3rem;
-  text-decoration: none;
-}
-
-h2 a:hover {
-  text-decoration: underline;
-}
-
 .intro {
   font-size: 1rem;
   color: #555;
@@ -46,9 +36,9 @@ h2 a:hover {
 main {
   max-width: 800px;
   margin: 2rem auto;
-  padding: 1.5rem;
-  background: #fffdf8;
-  border-radius: 12px;
+  padding: 2rem;
+  background: #fffaf5;
+  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
@@ -57,25 +47,18 @@ section {
 }
 
 section h3 {
+  margin-bottom: 0.6rem;
   font-size: 1.25rem;
   color: #1e1e1e;
-  margin-bottom: 0.75rem;
 }
 
 ul {
-  padding-left: 1.2rem;
-  list-style: none;
+  padding-left: 1.5rem;
+  list-style-type: none;
 }
 
-li::before {
-  content: '';
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
-.habits ul li::before {
-  content: '🔸'; /* fallback if emoji isn't used inline */
-  margin-right: 0.6rem;
+li {
+  margin-bottom: 0.75rem;
 }
 
 a {
@@ -87,10 +70,27 @@ a:hover {
   text-decoration: underline;
 }
 
-.practice-grid {
+footer {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.contact {
+  text-align: center;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* Practices Grid */
+.practices {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .practice-item {
@@ -102,62 +102,56 @@ a:hover {
 .practice-item::before {
   content: '✔';
   margin-right: 0.5rem;
+  color: #000; /* black icons for strong visual anchor */
+  font-weight: bold;
+}
+
+/* Daily Habits List Icons */
+.daily-habits li::before {
+  content: '✨';
+  margin-right: 0.5rem;
   color: #000;
   font-weight: bold;
 }
 
-.subscribe {
-  padding: 2rem 1rem;
-  text-align: center;
-  background: #f9f6f0;
-  border: 1px solid #e2e2e2;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+/* ConvertKit Embed: Button Styling */
+form button,
+form input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.contact {
-  text-align: center;
-  font-style: italic;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #666;
+form button:hover,
+form input[type="submit"]:hover {
+  background-color: #333;
 }
 
-footer {
-  text-align: center;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.85rem;
-  color: #999;
-  margin-top: 2rem;
+/* Gently Hide 'Built with Kit' Branding */
+form + div[style*="text-align:center"],
+.signup-form div[style*="text-align:center"] {
+  opacity: 0.03;
+  font-size: 0.7rem;
+  pointer-events: none;
 }
 
-/* Responsive Design */
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
-  body {
-    padding: 1rem;
-  }
-
-  main {
-    padding: 1rem;
-  }
-
-  .practice-grid {
+  .practices {
     grid-template-columns: 1fr;
   }
 
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.1rem;
-  }
-
-  .subscribe {
-    padding: 1rem;
+  main {
+    padding: 1.5rem;
   }
 }
+
 
 
 

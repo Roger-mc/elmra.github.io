@@ -275,3 +275,38 @@ footer em {
 html {
   scroll-behavior: smooth;
 }
+/* Pill Navigation Styles */
+.hover-reveal-pill-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.hover-reveal-pill-container {
+  /* Optional: add drop shadow or border for more emphasis */
+}
+
+.hover-reveal-pill {
+  display: inline-block;
+  padding: 0.7em 1.8em;
+  border-radius: 999px;           /* Maximum rounding for pill shape */
+  background: #7b2f52;            /* Your primary color */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.09);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.hover-reveal-pill:hover,
+.hover-reveal-pill:focus {
+  background: #f5c518;           /* Accent color on hover */
+  color: #7b2f52;
+  border-color: #7b2f52;
+  transform: translateY(-2px) scale(1.07);
+  text-decoration: none;
+}

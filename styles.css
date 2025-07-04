@@ -264,7 +264,7 @@ footer em {
   100% { transform: scale(1); }
 }
 .breathing-container {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 @keyframes fadeIn {
   to {

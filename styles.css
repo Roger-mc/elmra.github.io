@@ -291,10 +291,6 @@ html {
 }
 
 .hover-reveal-pill {
-  opacity: 1;
-  pointer-events: auto;
-  transition: opacity 0.s ease;
-  transform: translateY(0);
   display: inline-block;
   padding: 0.5em 1.5em;
   border-radius: 999px;
@@ -302,14 +298,15 @@ html {
   color: #3a2a2a;
   font-weight: 500;
   font-size: 1rem;
-  border: 1px solid rgba(90, 45, 61, 0.2); /* lighter stroke */
+  border: 1px solid rgba(90, 45, 61, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
   backdrop-filter: blur(2px);
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
 .hover-reveal-pill:hover {
   background: rgba(123, 47, 82, 0.15); /* slightly darker on hover */
-  color: #3a2a2a;
   cursor: pointer;
 }
 .back-button {

@@ -5,6 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elmra | Quiet mind.</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Breathing Guide Styles */
+    .breathing-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem auto;
+    }
+
+    .breathing-circle-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .breathing-circle {
+      width: 100px;
+      height: 100px;
+      background-color: #910f5a;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      animation: breathe 10s linear infinite;
+    }
+
+    .timer-ring {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-90deg);
+    }
+
+    .timer-ring circle {
+      fill: none;
+      stroke: #f5e501;
+      stroke-width: 20;
+      stroke-dasharray: 314;
+      stroke-dashoffset: 314;
+      animation: timer 60s linear infinite;
+    }
+
+    @keyframes breathe {
+      0%   { transform: scale(1); }
+      40%  { transform: scale(2); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes timer {
+      to { stroke-dashoffset: 0; }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -25,10 +80,19 @@
       <ul>
         <li>Pause whatever you’re doing.</li>
         <li>Breathe in for a count of four, out for a count of six.</li>
-        <li>Notice one sound, one sensation, one thought then let them pass.</li>
-        <li>Resume only what remains essential.</li>
+        <li>Notice sound, sensation and thought then let them pass.</li>
       </ul>
     </section>
+
+    <!-- Breathing Guide Insert -->
+    <div class="breathing-container">
+      <div class="breathing-circle-wrapper">
+        <svg class="timer-ring" width="120" height="120">
+          <circle class="timer-anim" cx="60" cy="60" r="50"/>
+        </svg>
+        <div class="breathing-circle"></div>
+      </div>
+    </div>
 
     <section class="contact">
       <p><a href="index.html">← Back to Elmra Home</a></p>

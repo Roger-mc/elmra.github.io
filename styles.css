@@ -231,7 +231,7 @@ footer em {
 /* Back to Home Link Styling */
 .contact {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .contact a {
@@ -264,7 +264,7 @@ footer em {
   100% { transform: scale(1); }
 }
 .breathing-container {
-  margin-bottom: 3.5rem;
+  margin-bottom: 5rem;
 }
 @keyframes fadeIn {
   to {

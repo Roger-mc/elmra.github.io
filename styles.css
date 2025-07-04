@@ -34,7 +34,7 @@ h2 {
 }
 
 /* Slogan Navigation Links */
-.slogan-links a {
+.slogan-links a:not(.hover-reveal-pill) {
   margin: 0 0.4rem;
   color: #2a2a2a;
   text-decoration: none;
@@ -284,29 +284,39 @@ html {
 }
 
 .hover-reveal-pill-container {
-  /* Optional: add drop shadow or border for more emphasis */
+  display: inline-block;
+  position: relative;
 }
 
 .hover-reveal-pill {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.4s ease;
+  transform: translateY(6px);
   display: inline-block;
   padding: 0.7em 1.8em;
-  border-radius: 999px;           /* Maximum rounding for pill shape */
-  background: #7b2f52;            /* Your primary color */
-  color: #fff;
+  border-radius: 999px;
+  background: #7b2f52;
+  color: #fff !important;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1em;
   box-shadow: 0 3px 12px rgba(0,0,0,0.09);
-  transition: background 0.2s, color 0.2s, transform 0.15s;
   border: 2px solid transparent;
   cursor: pointer;
 }
 
+.hover-reveal-pill-container:hover .hover-reveal-pill {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 .hover-reveal-pill:hover,
 .hover-reveal-pill:focus {
-  background: #f5c518;           /* Accent color on hover */
+  background: #f5c518;
   color: #7b2f52;
   border-color: #7b2f52;
-  transform: translateY(-2px) scale(1.07);
+  transform: scale(1.07);
   text-decoration: none;
 }

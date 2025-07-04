@@ -236,7 +236,7 @@ footer em {
 
 .contact a {
   display: inline-block;
-  background-color: #d4a857; /* gold that matches the timer ring */
+  background-color: #f5c518; /* golden sun - matches the timer*/
   color: #fff;
   border-radius: 50px;
   font-weight: 600;
@@ -248,7 +248,7 @@ footer em {
 }
 
 .contact a:hover {
-  background-color: #b9912c;
+  background-color: #f9d94e; /* lighter glow */
   transform: scale(1.05);
 }
 .breathe-label {

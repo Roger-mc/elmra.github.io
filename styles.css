@@ -291,19 +291,18 @@ html {
 .hover-reveal-pill {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.6s ease, transform 0.4s ease;
-  transform: translateY(6px);
+  transition: opacity 0.8s ease, transform 0.6s ease;
+  transform: translateY(8px);
   display: inline-block;
-  padding: 0.7em 1.8em;
-  border-radius: 999px;
-  background: #7b2f52;
-  color: #fff !important;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1em;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.09);
-  border: 2px solid transparent;
-  cursor: pointer;
+  padding: 0.5em 1.4em;
+  border-radius: 1000px;
+  background: rgba(123, 47, 82, 0.1); /* Very light touch of your brand tone */
+  color: #5a2d3d;
+  font-weight: 500;
+  font-size: 1rem;
+  border: 1px solid #5a2d3d;
+  backdrop-filter: blur(2px);
+  box-shadow: none;
 }
 
 .hover-reveal-pill-container:hover .hover-reveal-pill {
@@ -312,11 +311,8 @@ html {
   transform: translateY(0);
 }
 
-.hover-reveal-pill:hover,
-.hover-reveal-pill:focus {
-  background: #f5c518;
-  color: #7b2f52;
-  border-color: #7b2f52;
-  transform: scale(1.07);
-  text-decoration: none;
+.hover-reveal-pill:hover {
+  background: rgba(245, 197, 24, 0.15);
+  color: #5a2d3d;
+  transform: scale(1.03);
 }

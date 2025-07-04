@@ -236,20 +236,20 @@ footer em {
 
 .contact a {
   display: inline-block;
-  padding: 0.5rem 1.25rem;
-  background-color: #8d6e45;
+  background-color: #d4a857; /* gold that matches the timer ring */
   color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
+  border-radius: 50px;
+  font-weight: 600;
   font-size: 0.95rem;
+  padding: 0.6rem 1.4rem;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
   transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .contact a:hover {
-  background-color: #7a5f3c;
-  transform: scale(1.03);
+  background-color: #b9912c;
+  transform: scale(1.05);
 }
 .breathe-label {
   text-align: center;
